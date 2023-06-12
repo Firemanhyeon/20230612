@@ -14,9 +14,9 @@ public class FileEx {
 //			fos.close();// 출력
 			
 			//MemoApp.java 파일을 읽어서 화면(콘솔)에 출력
-			InputStream is = new FileInputStream("src/com/yedam/memo/MemoApp.java");
-			InputStreamReader isr = new InputStreamReader(is);
-			BufferedReader br = new BufferedReader(isr);
+			InputStream is = new FileInputStream("src/com/yedam/memo/MemoApp.java");//기본입출력스트림
+			InputStreamReader isr = new InputStreamReader(is);//바이트 - > 문자변환 보조스트림
+			BufferedReader br = new BufferedReader(isr);//성능향상 보조스트림
 			String str = "";
 			
 			while((str = br.readLine())!= null) {
