@@ -76,12 +76,14 @@ public class MemoManager {
 
 	// 파일저장
 	public void storeToFile() {
+		System.out.println("종료합니다");
 		try {
 			FileOutputStream fos = new FileOutputStream("c:/temp/memobook.dat");
 			ObjectOutputStream oos = new ObjectOutputStream(fos);
 			oos.writeObject(storage);
 			oos.close();
 			fos.close();
+			System.out.println("저장완료");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
